@@ -9,19 +9,12 @@ int main()
      float monthly_payment, s, denominator, numerator, i, k;
      int amount, years, n;
      float annual_percent;
-
-     // asking user to enter borrowed amount
-     cout << "Enter borrowed amount: ";
-     // storing it in a variable
-     cin >> amount;
-     // asking user to enter annual interest rate
-     cout << "Enter Annual interest rate: ";
-     // reading it into a variable
-     cin >> annual_percent;
-     // asking user to enter payback period
-     cout << "Enter Payback period: ";
-     // reading it into a variable
-     cin >> years;
+     // set amount
+     amount = 300000;
+     // set annual percentage
+     annual_percent = 4.15;
+     // set years
+     years = 30;
      // to make easy of formula calculating the equation as parts
      i = annual_percent / 1200;
      n = (years * 12);
@@ -33,11 +26,12 @@ int main()
      // finally calculating the monthlyvpayment
      monthly_payment = numerator / denominator;
      // printing the formatted result
-     cout << "Amount borrowed (programmer input) = "
-          << "$" << amount << endl;
+     // cout << k << endl;
+     cout << "Amount borrowed (programmer input) = ";
+     cout << "$" << amount << endl;
      cout << "Annual interest rate (programmer input) = " << annual_percent << "%" << endl;
      cout << "Payback period (programmer input) = " << years << " Years" << endl;
-     cout << "Monthly payment (Calculated output) = "
-          << "$" << fixed << setprecision(2) << monthly_payment << endl;
+     cout << "Monthly payment (Calculated output) = ";
+     cout << "$" << fixed << setprecision(2) << monthly_payment << endl;
      return 0;
 }
