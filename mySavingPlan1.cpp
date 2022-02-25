@@ -7,12 +7,12 @@ using namespace std;
 int main()
 {
     // input values
-    int years = 100;
+    int years = 8;
     int D = 100;
 
     // output (calculated) values
     double p = 0.075 / 12; // 7.5% annual interest rate
-    double T = yeras * 12;
+    double T = years * 12;
     double S = D * ((pow(1 + p, T) - 1) / p);
 
     // echoing input values, unformatted
@@ -20,7 +20,7 @@ int main()
     cout << D << " deposited per month will grow to $";
 
     // formatting output (see 4.2)
-    cout.self(ios::fixed | ios ::showpoint);
+    cout.setf(ios::fixed | ios ::showpoint);
     cout << setprecision(2);
     cout << S << "." << endl;
 }
